@@ -21,7 +21,7 @@ const Bolinhas: React.FC = () => {
     offset += 1;
   };
 
-  const mousePressed = (p5: p5Types) => {
+  const mousePressed = () => {
     console.log("a");
   };
 

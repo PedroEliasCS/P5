@@ -1,9 +1,9 @@
-import Bolhas from "../components/Bolhas";
+import UploadMidia from "../components/UploadMidia";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <Bolhas />
+      <UploadMidia />
     </>
   );
 };

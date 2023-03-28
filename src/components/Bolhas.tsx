@@ -45,13 +45,6 @@ const Bolhas: React.FC = () => {
 
   const setup = (p5: p5Types) => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight);
-    for (let i = 0; i < 100; i++) {
-      const x = p5.random(p5.width);
-      const y = p5.random(p5.height);
-      const r = p5.random(20, 60);
-      const b = new Bubble(x, y, r, p5);
-      bubbles.push(b);
-    }
   };
 
   const draw = (p5: p5Types) => {
@@ -60,12 +53,20 @@ const Bolhas: React.FC = () => {
       bubbles[i].move();
       bubbles[i].show();
     }
+
+    const r = 40;
+    const b = new Bubble(p5.mouseX, p5.mouseY, r, p5);
+    bubbles.push(b);
+
+    if (bubbles.length > 100) {
+      bubbles.shift();
+    }
   };
 
   const mousePressed = (p5: p5Types) => {
-    for (let i = 0; i < bubbles.length; i++) {
+    for (let i = bubbles.length - 1; i >= 0; i--) {
       if (bubbles[i].rollover(p5.mouseX, p5.mouseY)) {
-        bubbles[i].changeColor(255);
+        bubbles.splice(i, 1);
       }
     }
   };
