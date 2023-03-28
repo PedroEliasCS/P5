@@ -1,9 +1,9 @@
-import P5 from "../components/P5";
+import Bolhas from "../components/Bolhas";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <P5 />
+      <Bolhas />
     </>
   );
 };
