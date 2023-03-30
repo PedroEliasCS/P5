@@ -55,10 +55,10 @@ class QuadTreeClass {
     this.northWest = new QuadTreeClass(nw, this.capacity);
 
     const se = new Rectangle(x + w / 2, y + h / 2, w / 2, h / 2);
-    this.southHeast = new QuadTreeClass(se, 4);
+    this.southHeast = new QuadTreeClass(se, this.capacity);
 
     const sw = new Rectangle(x - w / 2, y + h / 2, w / 2, h / 2);
-    this.southWest = new QuadTreeClass(sw, 4);
+    this.southWest = new QuadTreeClass(sw, this.capacity);
   }
 
   public insert(point: Point) {
