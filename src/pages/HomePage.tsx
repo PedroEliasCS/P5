@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import QuadTree from "../components/QuadTree";
+import QuadTree from "../components/QuadTree/QuadTree";
 
 const HomePage: React.FC = () => {
   const [option, setOption] = useState<string>("QuadTree");
