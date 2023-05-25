@@ -41,16 +41,18 @@ const HomePage: React.FC = () => {
     <>
       <div>
         <form onSubmit={handleSubmit}>
-          <label>Select the element for show: </label>
+          <label>Seleciona o elemento: </label>
           <select
             name="components"
             id="components"
             onChange={(e) => setOption(e.target.value)}
           >
-            <option value="Bolhas">Bubbles</option>
-            <option value="Bolhinhas">Bubbles walking</option>
-            <option value="BolhasComunicacao">Bubbles Comunication</option>
-            <option value="QuadTree">Quad tree</option>
+            <option value="Bolhas">Bolhas</option>
+            <option value="Bolhinhas">Bolhas andando</option>
+            <option value="BolhasComunicacao">Bolhas que se comunicam</option>
+            <option value="QuadTree" selected>
+              QuadTree
+            </option>
           </select>
           <></>
           <button type="submit">Show</button>
